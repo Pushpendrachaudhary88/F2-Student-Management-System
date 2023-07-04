@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="shortcut icon" href="https://img.icons8.com/?size=512&id=Tioa8HL7aT9g&format=png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="Styles/style.css">
+    <link rel="stylesheet" href="Styles/form.css">
+    <link rel="stylesheet" href="Styles/student-table.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="form">
+            <h1>Student Management CRUD</h1>
+            <form action="" method="post" id="main-form" onsubmit="getData(event)">
+                <div class="top-row">
+                    <input type="text" name="name" id="name" placeholder="Name" required>
+                    <input type="email" name="email" id="email" placeholder="Email" required>
+                    <input type="text" name="gpa" id="gpa" placeholder="Grade" required>
+                </div>
+                <div class="mid-row">
+                    <input type="number" name="age" id="age" placeholder="Age" required>
+                    <input type="text" name="degree" id="degree" placeholder="Degree" required>
+                </div>
+                <div class="bottom-row">
+                    <button type="submit" id="add-btn">Add Student</button>
+                    <button type="button" id="edit-btn" onclick="updateData()">Edit Student</button>
+                </div>
+            </form>
+        </div>
+        <div class="search">
+            <input type="text" name="search" id="search" placeholder="Search by Name, email or Degree">
+        </div>
+        <div class="table">
+            <div class="table-wrapper">
+                <table id="student-details-table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Student Name</th>
+                            <th>Email</th>
+                            <th>Age</th>
+                            <th>Grade</th>
+                            <th style="width: calc(-0.5px);">Degree</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+
+                    </tbody>
+                </table>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>

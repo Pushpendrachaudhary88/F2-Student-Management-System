@@ -1,0 +1,21 @@
+*{
+    background: #111111;
+    font-family: 'Inter', sans-serif;
+    color: white;
+}
+
+.wrapper{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding: 35px 30px;
+}
+h1{
+    margin: 0;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 30px;
+}
+input#search{
+    width: calc(100% - 20px);
+}
